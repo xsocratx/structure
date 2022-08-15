@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package messages;
+
+message Response {
+    message HierarchicalStep {
+        required string name = 1;
+        required float duration = 2;
+    }
+
+    repeated HierarchicalStep hierarchical_step = 1;
+    required string max_duration_step_name = 2;
+    required float max_duration_step_duration = 3;
+}

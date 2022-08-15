@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package messages;
+
+message Request {
+    message Step {
+        required int32 id = 1;
+        optional int32 parent_id = 2;
+        required float duration = 3;
+        required string name = 4;
+    }
+
+    repeated Step steps = 1;
+    optional int32 step_id = 2;
+}
